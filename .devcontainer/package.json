@@ -1,0 +1,8 @@
+{
+  "name": "astro-opencode-image",
+  "type": "module",
+  "version": "1.0.0",
+  "dependencies": {
+    "astro": "^5.0.0"
+  }
+}
