@@ -1,0 +1,17 @@
+{
+  "name": "PacoMer",
+  "build": {
+    "dockerfile": "Dockerfile",
+    "context": "."
+  },
+  "forwardPorts": [4321],
+  "postCreateCommand": "npm install --no-audit --no-fund --loglevel=error",
+  "remoteUser": "node",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "astro-build.astro-vscode"
+      ]
+    }
+  }
+}
