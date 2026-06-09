@@ -1,7 +1,11 @@
-FROM ghcr.io/pakeating/devcontainerregistry/astro-opencode:latest
+FROM mcr.microsoft.com/devcontainers/javascript-node:20
 
-# Copiar configuración de gentle-ai (skills SDD, commands, orchestrator)
-COPY --chown=node:node gentle/config /home/node/.config/opencode
+RUN npm install -g opencode-ai
+
+COPY package.json package-lock.json* ./
+RUN npm install --no-audit --no-fund
+
+RUN rm -f package.json package-lock.json*
 
 # Instalar dependencias de plugins (skills globales, TUI, etc.)
 RUN cd /home/node/.config/opencode && npm install --no-audit --no-fund --loglevel=error
