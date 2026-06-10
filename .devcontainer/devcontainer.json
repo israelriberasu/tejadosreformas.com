@@ -1,11 +1,11 @@
 {
-  "name": "PacoMer",
+  "name": "TejadosReformas",
   "build": {
     "dockerfile": "Dockerfile",
     "context": "."
   },
   "forwardPorts": [4321],
-  "postCreateCommand": "npm install --no-audit --no-fund --loglevel=error",
+  "postCreateCommand": "if [ -f package.json ]; then npm install --no-audit --no-fund; else echo 'No package.json found. Ready to create Astro app!'; fi",
   "remoteUser": "node",
   "customizations": {
     "vscode": {
