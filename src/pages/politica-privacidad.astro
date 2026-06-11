@@ -1,0 +1,202 @@
+---
+/**
+ * politica-privacidad.astro — Política de Privacidad
+ * TejadosReformas Burgos
+ */
+
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Política de Privacidad">
+  <section class="legal-page">
+    <div class="container">
+      <h1 class="legal-page__title">Política de Privacidad</h1>
+
+      <div class="legal-page__content">
+        <article>
+          <h2>Responsable del Tratamiento</h2>
+          <p>
+            El responsable del tratamiento de los datos personales recabados a través del sitio web
+            <strong>tejadosreformas.com</strong> es:
+          </p>
+          <ul>
+            <li><strong>Denominación:</strong> TejadosReformas Burgos</li>
+            <li><strong>Domicilio:</strong> Burgos, Castilla y León, España</li>
+            <li><strong>Correo electrónico:</strong> contacto@tejadosreformas.com</li>
+            <li><strong>Teléfono:</strong> 622 299 746</li>
+          </ul>
+        </article>
+
+        <article>
+          <h2>Finalidad del Tratamiento</h2>
+          <p>
+            Los datos personales facilitados voluntariamente por el usuario a través de los
+            formularios de contacto y solicitud de presupuesto serán tratados con las siguientes
+            finalidades:
+          </p>
+          <ul>
+            <li>Atender y gestionar las solicitudes de información y presupuesto.</li>
+            <li>Contactar con el interesado para resolver dudas o ampliar información.</li>
+            <li>Enviar comunicaciones comerciales únicamente cuando el usuario haya prestado su
+            consentimiento expreso.</li>
+          </ul>
+        </article>
+
+        <article>
+          <h2>Base Legal del Tratamiento</h2>
+          <p>
+            La base legal para el tratamiento de los datos es el consentimiento del interesado,
+            manifestado mediante la aceptación expresa de esta política de privacidad y el envío
+            del formulario correspondiente. Asimismo, el tratamiento puede basarse en la necesidad
+            de aplicar medidas precontractuales solicitadas por el interesado (solicitud de
+            presupuesto).
+          </p>
+        </article>
+
+        <article>
+          <h2>Conservación de los Datos</h2>
+          <p>
+            Los datos personales serán conservados durante el tiempo necesario para cumplir con la
+            finalidad para la que fueron recabados. Una vez finalizada dicha finalidad, los datos
+            se mantendrán bloqueados durante los plazos legalmente establecidos para responder ante
+            posibles responsabilidades, tras lo cual serán eliminados de forma segura.
+          </p>
+        </article>
+
+        <article>
+          <h2>Derechos del Usuario (Derechos ARCO)</h2>
+          <p>
+            El usuario puede ejercer en cualquier momento los siguientes derechos reconocidos por el
+            Reglamento General de Protección de Datos (RGPD):
+          </p>
+          <ul>
+            <li><strong>Acceso:</strong> Solicitar información sobre los datos personales que
+            estamos tratando.</li>
+            <li><strong>Rectificación:</strong> Solicitar la corrección de datos inexactos o
+            incompletos.</li>
+            <li><strong>Cancelación (Supresión):</strong> Solicitar la eliminación de los datos
+            cuando ya no sean necesarios para la finalidad para la que fueron recabados.</li>
+            <li><strong>Oposición:</strong> Oponerse al tratamiento de sus datos para fines
+            específicos, como el envío de comunicaciones comerciales.</li>
+            <li><strong>Limitación del tratamiento:</strong> Solicitar la restricción del
+            tratamiento en determinadas circunstancias.</li>
+            <li><strong>Portabilidad:</strong> Solicitar la recepción de los datos en un formato
+            estructurado de uso común.</li>
+          </ul>
+          <p>
+            Para ejercer cualquiera de estos derechos, el usuario puede dirigirse a la siguiente
+            dirección de correo electrónico: <strong>contacto@tejadosreformas.com</strong>,
+            adjuntando una copia de su documento de identidad. También tiene derecho a presentar
+            una reclamación ante la Agencia Española de Protección de Datos (AEPD).
+          </p>
+        </article>
+
+        <article>
+          <h2>Formulario de Contacto</h2>
+          <p>
+            Los datos solicitados en el formulario de contacto son: nombre, teléfono, correo
+            electrónico y mensaje. Estos datos son los estrictamente necesarios para poder atender
+            la solicitud del usuario. El envío del formulario implica la aceptación expresa de esta
+            política de privacidad.
+          </p>
+        </article>
+
+        <article>
+          <h2>Datos de Navegación</h2>
+          <p>
+            El sitio web puede recopilar datos de navegación no personales, como la dirección IP,
+            el tipo de navegador, el sistema operativo y las páginas visitadas. Estos datos se
+            utilizan únicamente con fines estadísticos y de mejora del sitio, sin identificar al
+            usuario individualmente.
+          </p>
+        </article>
+
+        <article>
+          <h2>Cesión a Terceros</h2>
+          <p>
+            Los datos personales proporcionados no serán cedidos a terceros, salvo obligación legal.
+            No obstante, se informa de que se utiliza un servicio externo de gestión de formularios
+            para el envío de las solicitudes de contacto. Dicho servicio actúa como encargado del
+            tratamiento y cumple con la normativa vigente en materia de protección de datos.
+          </p>
+        </article>
+      </div>
+
+      <div class="legal-page__back">
+        <a href="/" class="btn btn-primary">&larr; Volver al inicio</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .legal-page {
+    padding-block: var(--spacing-3xl);
+  }
+
+  .legal-page__title {
+    font-size: var(--font-size-h1);
+    color: var(--color-primary);
+    margin-bottom: var(--spacing-2xl);
+    text-align: center;
+  }
+
+  .legal-page__content {
+    max-width: 800px;
+    margin-inline: auto;
+  }
+
+  .legal-page__content article {
+    margin-bottom: var(--spacing-2xl);
+  }
+
+  .legal-page__content h2 {
+    font-size: var(--font-size-h3);
+    color: var(--color-primary);
+    margin-bottom: var(--spacing-md);
+    padding-bottom: var(--spacing-sm);
+    border-bottom: 2px solid var(--color-accent);
+  }
+
+  .legal-page__content p {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: var(--color-text-light);
+    margin-bottom: var(--spacing-md);
+  }
+
+  .legal-page__content ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: var(--spacing-md);
+  }
+
+  .legal-page__content ul li {
+    padding: 0.375rem 0;
+    padding-left: 1.25rem;
+    position: relative;
+    font-size: 1rem;
+    line-height: 1.7;
+    color: var(--color-text-light);
+  }
+
+  .legal-page__content ul li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0.85rem;
+    width: 6px;
+    height: 6px;
+    background-color: var(--color-accent);
+    border-radius: 50%;
+  }
+
+  .legal-page__content ul li strong {
+    color: var(--color-text);
+  }
+
+  .legal-page__back {
+    text-align: center;
+    margin-top: var(--spacing-3xl);
+  }
+</style>

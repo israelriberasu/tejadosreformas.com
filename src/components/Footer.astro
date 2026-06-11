@@ -1,0 +1,213 @@
+<!-- Footer.astro — Footer principal del sitio -->
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer__grid">
+      <!-- Columna 1: Empresa -->
+      <div class="footer__col">
+        <h3 class="footer__brand">TejadosReformas</h3>
+        <p class="footer__desc">
+          Especialistas en construcción, reparación de tejados y reformas integrales en
+          Burgos y toda la provincia. Más de 15 años de experiencia ofreciendo
+          soluciones profesionales y garantizadas.
+        </p>
+      </div>
+
+      <!-- Columna 2: Contacto -->
+      <div class="footer__col">
+        <h3 class="footer__heading">Contacto</h3>
+        <ul class="footer__list">
+          <li>
+            <a href="tel:622299746" class="footer__link">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+              </svg>
+              <span>622 299 746</span>
+            </a>
+          </li>
+          <li>
+            <a href="mailto:contacto@tejadosreformas.com" class="footer__link">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                <polyline points="22,6 12,13 2,6"/>
+              </svg>
+              <span>contacto@tejadosreformas.com</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Columna 3: Horario -->
+      <div class="footer__col">
+        <h3 class="footer__heading">Horario</h3>
+        <ul class="footer__list">
+          <li class="footer__list-item">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <circle cx="12" cy="12" r="10"/>
+              <polyline points="12 6 12 12 16 14"/>
+            </svg>
+            <span>Lun – Vie: 8:00 – 19:00</span>
+          </li>
+          <li class="footer__list-item">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+            </svg>
+            <span>Urgencias fines de semana</span>
+          </li>
+        </ul>
+        <p class="footer__coverage">
+          <strong>Área de cobertura:</strong> Prestamos servicio en Burgos capital,
+          Miranda de Ebro, Aranda de Duero, Briviesca, Medina de Pomar y cualquier
+          municipio de la provincia de Burgos.
+        </p>
+      </div>
+    </div>
+
+    <!-- Barra inferior: legal links -->
+    <div class="footer__bottom">
+      <nav class="footer__legal" aria-label="Enlaces legales">
+        <a href="/aviso-legal">Aviso Legal</a>
+        <span class="footer__sep" aria-hidden="true">·</span>
+        <a href="/politica-privacidad">Política de Privacidad</a>
+        <span class="footer__sep" aria-hidden="true">·</span>
+        <a href="/politica-cookies">Política de Cookies</a>
+      </nav>
+      <p class="footer__copy">
+        &copy; 2026 TejadosReformas. Todos los derechos reservados.
+      </p>
+    </div>
+  </div>
+</footer>
+
+<style>
+  /* ---- Footer ---- */
+  .footer {
+    background-color: var(--color-primary, #1a3254);
+    color: #ffffff;
+    padding-block: 3.5rem 1.5rem;
+  }
+
+  .footer__grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  @media (min-width: 768px) {
+    .footer__grid {
+      grid-template-columns: 1.3fr 1fr 1.2fr;
+      gap: 3rem;
+    }
+  }
+
+  /* ---- Columns ---- */
+  .footer__brand {
+    font-size: 1.35rem;
+    font-weight: 800;
+    margin-bottom: 0.75rem;
+    letter-spacing: -0.02em;
+  }
+
+  .footer__desc {
+    font-size: 0.92rem;
+    line-height: 1.6;
+    opacity: 0.85;
+  }
+
+  .footer__heading {
+    font-size: 1.05rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: var(--color-accent, #e47923);
+  }
+
+  .footer__list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .footer__link,
+  .footer__list-item {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    font-size: 0.92rem;
+    opacity: 0.9;
+    transition: opacity 0.2s ease;
+  }
+
+  .footer__link:hover {
+    opacity: 1;
+    text-decoration: underline;
+  }
+
+  .footer__list-item svg,
+  .footer__link svg {
+    flex-shrink: 0;
+    color: var(--color-accent, #e47923);
+  }
+
+  .footer__coverage {
+    font-size: 0.85rem;
+    line-height: 1.6;
+    opacity: 0.8;
+    margin-top: 1.25rem;
+  }
+
+  .footer__coverage strong {
+    color: var(--color-accent, #e47923);
+    font-weight: 600;
+  }
+
+  /* ---- Bottom bar ---- */
+  .footer__bottom {
+    margin-top: 2.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .footer__legal {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.4rem;
+    font-size: 0.85rem;
+  }
+
+  .footer__legal a {
+    opacity: 0.75;
+    transition: opacity 0.2s ease;
+  }
+
+  .footer__legal a:hover {
+    opacity: 1;
+    text-decoration: underline;
+  }
+
+  .footer__sep {
+    opacity: 0.35;
+  }
+
+  .footer__copy {
+    font-size: 0.82rem;
+    opacity: 0.65;
+  }
+
+  @media (max-width: 600px) {
+    .footer {
+      padding-block: 2.5rem 1rem;
+    }
+
+    .footer__bottom {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+</style>

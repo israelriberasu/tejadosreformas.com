@@ -1,0 +1,95 @@
+---
+/**
+ * BaseLayout — Main layout for all pages
+ * TejadosReformas Burgos
+ *
+ * Includes: meta tags, Schema.org JSON-LD, Google Fonts,
+ * global CSS, and menu script.
+ */
+
+// Import global styles (Astro processes and bundles them)
+import '../styles/global.css';
+
+// Import child components
+import Header from '../components/Header.astro';
+import WhatsAppButton from '../components/WhatsAppButton.astro';
+
+interface Props {
+  title: string;
+  description?: string;
+}
+
+const { title, description } = Astro.props;
+const siteDescription =
+  description ||
+  'Empresa de reformas y reparación de tejados en Burgos. Presupuesto gratuito, materiales de calidad y profesionales con experiencia.';
+
+// Schema.org structured data for LocalBusiness
+const schemaData = {
+  '@context': 'https://schema.org',
+  '@type': 'LocalBusiness',
+  name: 'TejadosReformas Burgos',
+  telephone: '622299746',
+  areaServed: 'Provincia de Burgos',
+  url: 'https://tejadosreformas.com',
+  openingHoursSpecification: [
+    {
+      '@type': 'OpeningHoursSpecification',
+      dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
+      opens: '08:00',
+      closes: '19:00',
+    },
+  ],
+  image: 'https://tejadosreformas.com/favicon.svg',
+  address: {
+    '@type': 'PostalAddress',
+    addressRegion: 'Burgos',
+    addressCountry: 'ES',
+  },
+};
+---
+
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content={siteDescription} />
+    <meta name="theme-color" content="#1A3254" />
+
+    <title>{title} | TejadosReformas Burgos</title>
+
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Schema.org JSON-LD -->
+    <script type="application/ld+json" set:html={JSON.stringify(schemaData)}></script>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content={`${title} | TejadosReformas Burgos`} />
+    <meta property="og:description" content={siteDescription} />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://tejadosreformas.com" />
+    <meta property="og:image" content="https://tejadosreformas.com/favicon.svg" />
+    <meta property="og:locale" content="es_ES" />
+  </head>
+
+  <body>
+    <Header />
+    <main id="main-content">
+      <slot />
+    </main>
+    <WhatsAppButton />
+
+    <!-- Menu script (processed and bundled by Astro) -->
+    <script src="../scripts/menu.js"></script>
+  </body>
+</html>

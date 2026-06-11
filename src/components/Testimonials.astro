@@ -1,0 +1,180 @@
+<!-- Testimonials.astro — La opinión de quienes ya han confiado en nosotros -->
+
+<section id="testimonials" class="section testimonials">
+  <div class="container">
+    <header class="testimonials__header">
+      <h2>La opinión de quienes ya han confiado en nuestro equipo</h2>
+    </header>
+
+    <div class="testimonials__grid">
+      <!-- Testimonial 1 -->
+      <article class="testimonial-card">
+        <div class="testimonial-card__avatar" aria-hidden="true">
+          <span class="testimonial-card__initials">MS</span>
+        </div>
+        <blockquote class="testimonial-card__quote">
+          <p>
+            "Teníamos un problema grave de goteras en nuestra casa de Aranda de Duero.
+            Vinieron rápido, evaluaron el tejado y nos dieron un presupuesto transparente.
+            Reparación impecable y sin incidencias."
+          </p>
+        </blockquote>
+        <footer class="testimonial-card__author">
+          <cite>Mariano S.</cite>
+          <span class="testimonial-card__location">Aranda de Duero</span>
+        </footer>
+      </article>
+
+      <!-- Testimonial 2 -->
+      <article class="testimonial-card">
+        <div class="testimonial-card__avatar" aria-hidden="true">
+          <span class="testimonial-card__initials">BM</span>
+        </div>
+        <blockquote class="testimonial-card__quote">
+          <p>
+            "Les contratamos para reformar el baño en Burgos capital y para cambiar unos
+            enchufes antiguos. Da gusto tratar con profesionales que limpian al terminar y
+            cumplen las fechas."
+          </p>
+        </blockquote>
+        <footer class="testimonial-card__author">
+          <cite>Beatriz M.</cite>
+          <span class="testimonial-card__location">Burgos</span>
+        </footer>
+      </article>
+    </div>
+  </div>
+</section>
+
+<style>
+  /* ---- Testimonials ---- */
+  .testimonials {
+    background-color: var(--color-bg-alt, #f8f9fa);
+  }
+
+  .testimonials__header {
+    text-align: center;
+    max-width: 700px;
+    margin-inline: auto;
+    margin-bottom: 3rem;
+  }
+
+  .testimonials__grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    max-width: 900px;
+    margin-inline: auto;
+  }
+
+  @media (min-width: 700px) {
+    .testimonials__grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  /* ---- Testimonial Card ---- */
+  .testimonial-card {
+    background-color: #ffffff;
+    border-radius: var(--border-radius, 8px);
+    padding: 2rem 1.75rem;
+    box-shadow: var(--shadow-sm, 0 2px 8px rgba(0, 0, 0, 0.06));
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    transition:
+      transform 0.3s ease,
+      box-shadow 0.3s ease;
+  }
+
+  .testimonial-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-md, 0 4px 16px rgba(0, 0, 0, 0.1));
+  }
+
+  /* Decorative quotation mark */
+  .testimonial-card::before {
+    content: '\201C';
+    position: absolute;
+    top: 0.5rem;
+    left: 1rem;
+    font-size: 4rem;
+    line-height: 1;
+    color: var(--color-accent, #e47923);
+    opacity: 0.15;
+    font-family: Georgia, serif;
+    pointer-events: none;
+  }
+
+  .testimonial-card__avatar {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: var(--color-primary, #1a3254);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.25rem;
+    flex-shrink: 0;
+  }
+
+  .testimonial-card__initials {
+    color: #ffffff;
+    font-size: 1.1rem;
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: 0.05em;
+  }
+
+  .testimonial-card__quote {
+    margin-bottom: 1.25rem;
+    flex: 1;
+  }
+
+  .testimonial-card__quote p {
+    font-size: 0.95rem;
+    line-height: 1.7;
+    color: var(--color-text, #1a1a1a);
+    font-style: italic;
+  }
+
+  .testimonial-card__author {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    border-top: 1px solid var(--color-border, #e0e0e0);
+    padding-top: 1rem;
+  }
+
+  .testimonial-card__author cite {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 0.95rem;
+    color: var(--color-primary, #1a3254);
+  }
+
+  .testimonial-card__location {
+    font-size: 0.85rem;
+    color: var(--color-text-light, #555);
+    margin-top: 0.15rem;
+  }
+
+  @media (max-width: 600px) {
+    .testimonials__header {
+      margin-bottom: 2rem;
+    }
+
+    .testimonial-card {
+      padding: 1.5rem 1.25rem;
+    }
+
+    .testimonial-card__avatar {
+      width: 50px;
+      height: 50px;
+    }
+
+    .testimonial-card__initials {
+      font-size: 1rem;
+    }
+  }
+</style>

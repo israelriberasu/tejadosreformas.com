@@ -1,0 +1,172 @@
+<!-- MultiServices.astro — Reformas del hogar, albañilería y reparaciones -->
+
+<section id="multi-services" class="section multiservices">
+  <div class="container">
+    <header class="multiservices__header">
+      <h2>Reformas del Hogar, Albañilería y Reparaciones Rápidas</h2>
+      <p class="multiservices__intro">
+        ¿Quieres reformar tu cocina, cambiar la bañera por un plato de ducha o solucionar
+        una pequeña avería? Centraliza todas tus necesidades con un único equipo
+        multidisciplinar y de total confianza.
+      </p>
+    </header>
+
+    <div class="multiservices__grid">
+      <!-- Category 1 -->
+      <article class="service-card">
+        <div class="service-card__icon" aria-hidden="true">
+          <svg viewBox="0 0 48 48" fill="none" width="48" height="48">
+            <rect x="8" y="12" width="32" height="28" rx="2" stroke="currentColor" stroke-width="2.5" fill="none"/>
+            <path d="M18 12V8a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v4" stroke="currentColor" stroke-width="2.5"/>
+            <path d="M8 24h32" stroke="currentColor" stroke-width="2"/>
+            <rect x="16" y="28" width="16" height="12" rx="1" fill="var(--color-accent, #E47923)"/>
+          </svg>
+        </div>
+        <h3 class="service-card__title">Albañilería y Reformas Integrales</h3>
+        <p class="service-card__desc">
+          Reformas completas de viviendas y locales, tabiquería interior, instalación de
+          Pladur, alicatados, solados y acabados profesionales.
+        </p>
+      </article>
+
+      <!-- Category 2 -->
+      <article class="service-card">
+        <div class="service-card__icon" aria-hidden="true">
+          <svg viewBox="0 0 48 48" fill="none" width="48" height="48">
+            <path d="M14 28a12 12 0 0 1 20-12" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+            <path d="M34 28a12 12 0 0 1-20 12" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+            <circle cx="24" cy="24" r="14" stroke="currentColor" stroke-width="2.5" fill="none"/>
+            <path d="M24 10v10l6 6" stroke="var(--color-accent, #E47923)" stroke-width="2.5" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <h3 class="service-card__title">Fontanería y Saneamientos</h3>
+        <p class="service-card__desc">
+          Reparación de fugas, instalación y sustitución de grifería y sanitarios,
+          desatascos, tuberías y sistemas de calentadores de agua.
+        </p>
+      </article>
+
+      <!-- Category 3 -->
+      <article class="service-card">
+        <div class="service-card__icon" aria-hidden="true">
+          <svg viewBox="0 0 48 48" fill="none" width="48" height="48">
+            <path d="M12 28a16 16 0 0 1 32-12" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+            <circle cx="14" cy="34" r="8" stroke="currentColor" stroke-width="2.5" fill="none"/>
+            <circle cx="14" cy="34" r="3" fill="var(--color-accent, #E47923)"/>
+            <path d="M24 18v8l4 4" stroke="var(--color-accent, #E47923)" stroke-width="2.5" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <h3 class="service-card__title">Electricidad e Iluminación</h3>
+        <p class="service-card__desc">
+          Instalaciones eléctricas completas, puntos de luz, cuadros eléctricos,
+          mecanismos, automatización de persianas y sistemas de ahorro energético.
+        </p>
+      </article>
+
+      <!-- Category 4 -->
+      <article class="service-card">
+        <div class="service-card__icon" aria-hidden="true">
+          <svg viewBox="0 0 48 48" fill="none" width="48" height="48">
+            <rect x="10" y="8" width="28" height="32" rx="3" stroke="currentColor" stroke-width="2.5" fill="none"/>
+            <path d="M18 8v32" stroke="currentColor" stroke-width="2"/>
+            <rect x="22" y="26" width="12" height="10" rx="1" fill="var(--color-accent, #E47923)"/>
+            <circle cx="16" cy="16" r="2" fill="var(--color-accent, #E47923)"/>
+          </svg>
+        </div>
+        <h3 class="service-card__title">Servicio de Manitas</h3>
+        <p class="service-card__desc">
+          Montaje de muebles, instalación de cortinas y persianas, cambio de cerraduras,
+          pequeñas reparaciones y todo tipo de arreglos del hogar.
+        </p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<style>
+  /* ---- MultiServices ---- */
+  .multiservices {
+    background-color: var(--color-bg, #ffffff);
+  }
+
+  .multiservices__header {
+    text-align: center;
+    max-width: 780px;
+    margin-inline: auto;
+    margin-bottom: 3rem;
+  }
+
+  .multiservices__intro {
+    font-size: 1.05rem;
+    color: var(--color-text-light, #555);
+    line-height: 1.7;
+  }
+
+  .multiservices__grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  @media (min-width: 600px) {
+    .multiservices__grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (min-width: 1000px) {
+    .multiservices__grid {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+
+  /* Reuse service-card styles from RoofingServices (they're scoped per component) */
+  .service-card {
+    background-color: var(--color-bg-alt, #f8f9fa);
+    border-radius: var(--border-radius, 8px);
+    padding: 1.75rem 1.5rem;
+    box-shadow: var(--shadow-sm, 0 2px 8px rgba(0, 0, 0, 0.06));
+    transition:
+      transform 0.3s ease,
+      box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .service-card:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-md, 0 4px 16px rgba(0, 0, 0, 0.1));
+  }
+
+  .service-card__icon {
+    color: var(--color-primary, #1a3254);
+    margin-bottom: 1rem;
+    flex-shrink: 0;
+  }
+
+  .service-card__title {
+    font-size: 1.1rem;
+    font-weight: 700;
+    line-height: 1.3;
+    margin-bottom: 0.6rem;
+    color: var(--color-primary, #1a3254);
+  }
+
+  .service-card__desc {
+    font-size: 0.92rem;
+    line-height: 1.6;
+    color: var(--color-text-light, #555);
+    flex: 1;
+  }
+
+  @media (max-width: 600px) {
+    .multiservices__header {
+      margin-bottom: 2rem;
+    }
+
+    .service-card {
+      padding: 1.5rem 1.25rem;
+    }
+  }
+</style>

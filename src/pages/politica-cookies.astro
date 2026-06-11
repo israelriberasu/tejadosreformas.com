@@ -1,0 +1,204 @@
+---
+/**
+ * politica-cookies.astro — Política de Cookies
+ * TejadosReformas Burgos
+ */
+
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Política de Cookies">
+  <section class="legal-page">
+    <div class="container">
+      <h1 class="legal-page__title">Política de Cookies</h1>
+
+      <div class="legal-page__content">
+        <article>
+          <h2>¿Qué son las Cookies?</h2>
+          <p>
+            Las cookies son pequeños archivos de texto que se almacenan en el navegador del usuario
+            cuando visita un sitio web. Su finalidad es permitir que el sitio web recuerde las
+            preferencias del usuario, mejorar la experiencia de navegación y, en algunos casos,
+            obtener información estadística sobre el uso del sitio.
+          </p>
+          <p>
+            Las cookies pueden ser propias (gestionadas por el propio sitio web) o de terceros
+            (gestionadas por servicios externos). En ningún caso se utilizan cookies para recopilar
+            información personal del usuario sin su consentimiento expreso.
+          </p>
+        </article>
+
+        <article>
+          <h2>Tipos de Cookies Utilizadas</h2>
+          <p>
+            En <strong>tejadosreformas.com</strong> utilizamos las siguientes categorías de cookies:
+          </p>
+
+          <h3>Cookies Técnicas (Necesarias)</h3>
+          <p>
+            Estas cookies son imprescindibles para el correcto funcionamiento del sitio web y no
+            pueden desactivarse. Permiten la navegación básica, la visualización correcta de los
+            contenidos y el acceso a áreas seguras de la página. No almacenan ningún dato personal
+            y se eliminan automáticamente al cerrar el navegador.
+          </p>
+
+          <h3>Cookies de Personalización</h3>
+          <p>
+            Permiten recordar las preferencias del usuario en futuras visitas, como el idioma
+            seleccionado o la región desde la que accede.
+          </p>
+
+          <h3>Cookies de Análisis (Analytics)</h3>
+          <p>
+            Este sitio web puede utilizar herramientas de análisis que instalan cookies para
+            recopilar información anónima sobre el comportamiento de navegación del usuario
+            (páginas visitadas, tiempo de permanencia, origen del tráfico, etc.). Esta
+            información se utiliza únicamente para mejorar la funcionalidad y los contenidos del
+            sitio. En caso de implementarse, se solicitará el consentimiento previo del usuario.
+          </p>
+        </article>
+
+        <article>
+          <h2>Cookies de Terceros</h2>
+          <p>
+            En este sitio web se utilizan los siguientes servicios de terceros que pueden instalar
+            cookies:
+          </p>
+          <ul>
+            <li>
+              <strong>Google Fonts:</strong> Servicio de alojamiento de tipografías de Google LLC.
+              Al cargar las fuentes desde los servidores de Google, su navegador puede establecer
+              una conexión con dichos servidores, lo que puede implicar la transmisión de datos
+              como la dirección IP. Para más información, consulte la
+              <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Política de Privacidad de Google</a>.
+            </li>
+          </ul>
+        </article>
+
+        <article>
+          <h2>Gestión de Cookies</h2>
+          <p>
+            El usuario puede gestionar y configurar el uso de cookies en cualquier momento a través
+            de la configuración de su navegador. A continuación, se indican los enlaces a las
+            páginas de configuración de los navegadores más comunes:
+          </p>
+          <ul>
+            <li>
+              <a href="https://support.google.com/chrome/answer/95647" target="_blank" rel="noopener noreferrer">Google Chrome</a>
+            </li>
+            <li>
+              <a href="https://support.mozilla.org/es/kb/habilitar-y-deshabilitar-cookies-sitios-web-rastrear-preferencias" target="_blank" rel="noopener noreferrer">Mozilla Firefox</a>
+            </li>
+            <li>
+              <a href="https://support.apple.com/es-es/guide/safari/sfri11471/mac" target="_blank" rel="noopener noreferrer">Safari</a>
+            </li>
+            <li>
+              <a href="https://support.microsoft.com/es-es/microsoft-edge/eliminar-cookies-en-microsoft-edge-63947406-40ac-c3b8-57b9-2a946a29ae09" target="_blank" rel="noopener noreferrer">Microsoft Edge</a>
+            </li>
+          </ul>
+          <p>
+            Si el usuario decide deshabilitar las cookies técnicas, es posible que algunas
+            funcionalidades del sitio web no funcionen correctamente. La desactivación de las
+            cookies de análisis no afectará al funcionamiento básico del sitio.
+          </p>
+          <p>
+            Para cualquier consulta adicional sobre el uso de cookies, puede contactarnos a través
+            del correo electrónico: <strong>contacto@tejadosreformas.com</strong>.
+          </p>
+        </article>
+      </div>
+
+      <div class="legal-page__back">
+        <a href="/" class="btn btn-primary">&larr; Volver al inicio</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .legal-page {
+    padding-block: var(--spacing-3xl);
+  }
+
+  .legal-page__title {
+    font-size: var(--font-size-h1);
+    color: var(--color-primary);
+    margin-bottom: var(--spacing-2xl);
+    text-align: center;
+  }
+
+  .legal-page__content {
+    max-width: 800px;
+    margin-inline: auto;
+  }
+
+  .legal-page__content article {
+    margin-bottom: var(--spacing-2xl);
+  }
+
+  .legal-page__content h2 {
+    font-size: var(--font-size-h3);
+    color: var(--color-primary);
+    margin-bottom: var(--spacing-md);
+    padding-bottom: var(--spacing-sm);
+    border-bottom: 2px solid var(--color-accent);
+  }
+
+  .legal-page__content h3 {
+    font-size: 1.125rem;
+    color: var(--color-primary);
+    margin-bottom: var(--spacing-sm);
+    margin-top: var(--spacing-lg);
+  }
+
+  .legal-page__content p {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: var(--color-text-light);
+    margin-bottom: var(--spacing-md);
+  }
+
+  .legal-page__content ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: var(--spacing-md);
+  }
+
+  .legal-page__content ul li {
+    padding: 0.375rem 0;
+    padding-left: 1.25rem;
+    position: relative;
+    font-size: 1rem;
+    line-height: 1.7;
+    color: var(--color-text-light);
+  }
+
+  .legal-page__content ul li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0.85rem;
+    width: 6px;
+    height: 6px;
+    background-color: var(--color-accent);
+    border-radius: 50%;
+  }
+
+  .legal-page__content ul li strong {
+    color: var(--color-text);
+  }
+
+  .legal-page__content a {
+    color: var(--color-accent);
+    text-decoration: underline;
+  }
+
+  .legal-page__content a:hover {
+    color: var(--color-accent-hover);
+  }
+
+  .legal-page__back {
+    text-align: center;
+    margin-top: var(--spacing-3xl);
+  }
+</style>

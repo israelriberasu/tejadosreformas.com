@@ -1,0 +1,198 @@
+<!-- FAQ.astro — Preguntas frecuentes con acordeón CSS y schema JSON-LD -->
+
+<section id="faq" class="section faq">
+  <div class="container">
+    <header class="faq__header">
+      <h2>Preguntas Frecuentes sobre nuestros servicios de construcción</h2>
+    </header>
+
+    <div class="faq__list">
+      <!-- Question 1 -->
+      <details class="faq__item" name="faq">
+        <summary class="faq__question">
+          <span>¿El presupuesto o la visita técnica tienen algún coste?</span>
+          <span class="faq__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5">
+              <path d="M6 9l6 6 6-6" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </span>
+        </summary>
+        <div class="faq__answer">
+          <p>
+            No, nos desplazamos a cualquier punto de la provincia de Burgos para evaluar
+            el trabajo necesario y emitimos un presupuesto detallado totalmente gratuito y
+            sin compromiso.
+          </p>
+        </div>
+      </details>
+
+      <!-- Question 2 -->
+      <details class="faq__item" name="faq">
+        <summary class="faq__question">
+          <span>¿Qué tipo de garantía ofrecéis en la reparación de tejados?</span>
+          <span class="faq__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5">
+              <path d="M6 9l6 6 6-6" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </span>
+        </summary>
+        <div class="faq__answer">
+          <p>
+            Dependiendo de la intervención, nuestros trabajos disponen de garantía firmada
+            que protege tu inversión con total respaldo documental.
+          </p>
+        </div>
+      </details>
+
+      <!-- Question 3 -->
+      <details class="faq__item" name="faq">
+        <summary class="faq__question">
+          <span>¿Atendéis urgencias por goteras o roturas?</span>
+          <span class="faq__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5">
+              <path d="M6 9l6 6 6-6" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </span>
+        </summary>
+        <div class="faq__answer">
+          <p>
+            Sí, disponemos de servicio de atención ágil para filtraciones graves y roturas
+            que requieran intervención inmediata. Contáctanos y te daremos prioridad.
+          </p>
+        </div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- Structured Data: FAQPage -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "¿El presupuesto o la visita técnica tienen algún coste?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No, nos desplazamos a cualquier punto de la provincia de Burgos para evaluar el trabajo necesario y emitimos un presupuesto detallado totalmente gratuito y sin compromiso."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Qué tipo de garantía ofrecéis en la reparación de tejados?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Dependiendo de la intervención, nuestros trabajos disponen de garantía firmada que protege tu inversión con total respaldo documental."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Atendéis urgencias por goteras o roturas?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sí, disponemos de servicio de atención ágil para filtraciones graves y roturas que requieran intervención inmediata. Contáctanos y te daremos prioridad."
+      }
+    }
+  ]
+}
+</script>
+
+<style>
+  /* ---- FAQ ---- */
+  .faq {
+    background-color: var(--color-bg, #ffffff);
+  }
+
+  .faq__header {
+    text-align: center;
+    max-width: 700px;
+    margin-inline: auto;
+    margin-bottom: 2.5rem;
+  }
+
+  .faq__list {
+    max-width: 760px;
+    margin-inline: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  /* ---- Accordion item (details/summary) ---- */
+  .faq__item {
+    border: 1px solid var(--color-border, #e0e0e0);
+    border-radius: var(--border-radius, 8px);
+    overflow: hidden;
+    background-color: var(--color-bg-alt, #f8f9fa);
+    transition: box-shadow 0.25s ease;
+  }
+
+  .faq__item[open] {
+    box-shadow: var(--shadow-sm, 0 2px 8px rgba(0, 0, 0, 0.06));
+  }
+
+  .faq__question {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 1.15rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1.4;
+    cursor: pointer;
+    list-style: none;
+    color: var(--color-primary, #1a3254);
+    user-select: none;
+  }
+
+  /* Remove default marker in various browsers */
+  .faq__question::-webkit-details-marker {
+    display: none;
+  }
+
+  .faq__question::marker {
+    display: none;
+    content: '';
+  }
+
+  .faq__question:hover {
+    background-color: rgba(0, 0, 0, 0.02);
+  }
+
+  /* Chevron icon rotation */
+  .faq__icon {
+    flex-shrink: 0;
+    color: var(--color-accent, #e47923);
+    transition: transform 0.3s ease;
+  }
+
+  .faq__item[open] .faq__icon {
+    transform: rotate(180deg);
+  }
+
+  .faq__answer {
+    padding: 0 1.5rem 1.25rem;
+    font-size: 0.95rem;
+    line-height: 1.65;
+    color: var(--color-text-light, #555);
+  }
+
+  @media (max-width: 600px) {
+    .faq__header {
+      margin-bottom: 2rem;
+    }
+
+    .faq__question {
+      padding: 1rem 1.15rem;
+      font-size: 0.95rem;
+    }
+
+    .faq__answer {
+      padding: 0 1.15rem 1rem;
+      font-size: 0.9rem;
+    }
+  }
+</style>

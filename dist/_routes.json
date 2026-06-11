@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "include": [
+    "/*"
+  ],
+  "exclude": [
+    "/",
+    "/_astro/*",
+    "/favicon.svg",
+    "/aviso-legal",
+    "/politica-cookies",
+    "/politica-privacidad"
+  ]
+}

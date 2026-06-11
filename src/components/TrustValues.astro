@@ -1,0 +1,191 @@
+<!-- TrustValues.astro — ¿Por qué confiar en nosotros? -->
+
+<section id="trust-values" class="section trust">
+  <div class="container">
+    <header class="trust__header">
+      <h2>¿Por qué confiar en nosotros para tus reformas en Burgos?</h2>
+    </header>
+
+    <div class="trust__grid">
+      <!-- Pillar 1 -->
+      <article class="value-card" data-animate>
+        <div class="value-card__icon" aria-hidden="true">
+          <svg viewBox="0 0 48 48" fill="none" width="48" height="48">
+            <rect x="6" y="10" width="36" height="28" rx="3" stroke="currentColor" stroke-width="2.5" fill="none"/>
+            <path d="M16 26l6 6 12-12" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <h3 class="value-card__title">Presupuestos Cerrados por Escrito</h3>
+        <p class="value-card__desc">
+          Documentamos cada partida del presupuesto para que conozcas el precio final
+          desde el primer día. Sin sorpresas ni sobrecostes.
+        </p>
+      </article>
+
+      <!-- Pillar 2 -->
+      <article class="value-card" data-animate>
+        <div class="value-card__icon" aria-hidden="true">
+          <svg viewBox="0 0 48 48" fill="none" width="48" height="48">
+            <circle cx="24" cy="24" r="18" stroke="currentColor" stroke-width="2.5" fill="none"/>
+            <path d="M16 24l6 6 12-12" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <h3 class="value-card__title">Garantía Certificada</h3>
+        <p class="value-card__desc">
+          Todos los trabajos de cubiertas y reformas disponen de garantía por escrito,
+          protegiendo tu inversión con total tranquilidad.
+        </p>
+      </article>
+
+      <!-- Pillar 3 -->
+      <article class="value-card" data-animate>
+        <div class="value-card__icon" aria-hidden="true">
+          <svg viewBox="0 0 48 48" fill="none" width="48" height="48">
+            <rect x="8" y="12" width="32" height="24" rx="2" stroke="currentColor" stroke-width="2.5" fill="none"/>
+            <path d="M16 8h4v4h-4V8ZM28 8h4v4h-4V8Z" fill="currentColor"/>
+            <circle cx="16" cy="26" r="2" fill="var(--color-accent, #E47923)"/>
+            <circle cx="24" cy="26" r="2" fill="var(--color-accent, #E47923)"/>
+            <circle cx="32" cy="26" r="2" fill="var(--color-accent, #E47923)"/>
+          </svg>
+        </div>
+        <h3 class="value-card__title">Compromiso de Limpieza y Plazos</h3>
+        <p class="value-card__desc">
+          Respetamos escrupulosamente los tiempos acordados y dejamos todo impecable al
+          finalizar cada intervención.
+        </p>
+      </article>
+
+      <!-- Pillar 4 -->
+      <article class="value-card" data-animate>
+        <div class="value-card__icon" aria-hidden="true">
+          <svg viewBox="0 0 48 48" fill="none" width="48" height="48">
+            <circle cx="24" cy="16" r="8" stroke="currentColor" stroke-width="2.5" fill="none"/>
+            <path d="M12 44c0-8 6-14 12-14s12 6 12 14" stroke="currentColor" stroke-width="2.5" fill="none"/>
+            <path d="M16 38h16" stroke="var(--color-accent, #E47923)" stroke-width="2.5"/>
+          </svg>
+        </div>
+        <h3 class="value-card__title">Técnicos Homologados</h3>
+        <p class="value-card__desc">
+          Contamos con profesionales cualificados, con experiencia y debidamente
+          asegurados para ofrecerte el máximo rigor y seguridad.
+        </p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<script>
+  // Intersection Observer for fade-in animation on scroll
+  (() => {
+    const cards = document.querySelectorAll('#trust-values .value-card');
+    if (!cards.length) return;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('value-card--visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.15 }
+    );
+
+    cards.forEach((card) => observer.observe(card));
+  })();
+</script>
+
+<style>
+  /* ---- Trust Values ---- */
+  .trust {
+    background-color: var(--color-primary, #1a3254);
+    color: #ffffff;
+  }
+
+  .trust__header {
+    text-align: center;
+    max-width: 700px;
+    margin-inline: auto;
+    margin-bottom: 3rem;
+  }
+
+  .trust__grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.75rem;
+  }
+
+  @media (min-width: 600px) {
+    .trust__grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (min-width: 1000px) {
+    .trust__grid {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+
+  /* ---- Value Card ---- */
+  .value-card {
+    background-color: rgba(255, 255, 255, 0.07);
+    border: 1px solid rgba(255, 255, 255, 0.10);
+    border-radius: var(--border-radius, 8px);
+    padding: 2rem 1.5rem;
+    text-align: center;
+    transition:
+      transform 0.35s ease,
+      background-color 0.35s ease,
+      box-shadow 0.35s ease;
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  .value-card--visible {
+    opacity: 1;
+    transform: translateY(0);
+    transition:
+      opacity 0.6s ease,
+      transform 0.6s ease;
+  }
+
+  .value-card:hover {
+    transform: translateY(-6px);
+    background-color: rgba(255, 255, 255, 0.12);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+  }
+
+  .value-card--visible:hover {
+    transform: translateY(-6px);
+  }
+
+  .value-card__icon {
+    color: var(--color-accent, #e47923);
+    margin-bottom: 1.25rem;
+  }
+
+  .value-card__title {
+    font-size: 1.1rem;
+    font-weight: 700;
+    line-height: 1.3;
+    margin-bottom: 0.65rem;
+  }
+
+  .value-card__desc {
+    font-size: 0.92rem;
+    line-height: 1.6;
+    opacity: 0.88;
+  }
+
+  @media (max-width: 600px) {
+    .trust__header {
+      margin-bottom: 2rem;
+    }
+
+    .value-card {
+      padding: 1.5rem 1.25rem;
+    }
+  }
+</style>

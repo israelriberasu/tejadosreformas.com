@@ -1,0 +1,32 @@
+---
+/**
+ * index.astro — Página principal (Landing Page)
+ * TejadosReformas Burgos
+ *
+ * Importa y renderiza todos los componentes embebidos del sitio.
+ */
+
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Hero from '../components/Hero.astro';
+import RoofingServices from '../components/RoofingServices.astro';
+import MultiServices from '../components/MultiServices.astro';
+import TrustValues from '../components/TrustValues.astro';
+import Testimonials from '../components/Testimonials.astro';
+import FAQ from '../components/FAQ.astro';
+import ContactForm from '../components/ContactForm.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<BaseLayout
+  title="Inicio"
+  description="Empresa de reformas y reparación de tejados en Burgos. Ofrecemos servicios profesionales de construcción, impermeabilización, reformas integrales y más. Presupuesto gratuito."
+>
+  <Hero />
+  <RoofingServices />
+  <MultiServices />
+  <TrustValues />
+  <Testimonials />
+  <FAQ />
+  <ContactForm />
+  <Footer />
+</BaseLayout>
